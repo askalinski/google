@@ -1,0 +1,234 @@
+/*--------------------HTML EN GENERAL---------------------*/
+@media (min-width: 1400px) {
+body {
+    grid-template-rows: 8% 83.5% 8%;
+ 	}/*taille minimum*/
+}
+body {
+  height: 100%;/*pren la taille de l'ecran utilisé en 100%*/
+  margin: 0;/*pas de marge*/
+  display: grid;/*display définit le type d'affichage utilisée pour le rendu d'un élément (de bloc ou en ligne) et la disposition utilisée pour ses éléments fils : grille ou boîtes flexibles.*/
+  grid-template-columns: 100%;
+  grid-template-rows: 8% 79% 8%;
+  justify-content: space-between;
+  align-items: space-between;
+}
+html { 
+    box-sizing: border-box;  
+    width: 100%;
+    height: 100%;
+}
+
+
+/*FONT*/
+*, *:before, *:after {
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  box-sizing: inherit;
+  margin: 0;
+}
+
+/*LIENS CLIQUABLE*/
+li {
+  list-style: none;
+  font-size: 0.5rem;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+li:first-child {
+  margin-left: 0;
+}
+
+li a {
+  text-decoration: none;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+
+
+/*--------------------HEADER---------------------*/
+
+#nav-header{
+	margin-top: 5px;/*5px de marge en haut de la nav*/
+	height: 30px;/* quoi qu'il arrive la hauteur de la div peut inport la taille de t'ecran elle restera a 30px de haut c'est pour cela que ca reste en px*/
+	width: 100%;/* s'adapte a la taille de l'ecran donc en % */
+	display: flex;/* les blocs se positionnent cote a cote par default*/
+	align-items: center; /* alignement au centre de la nav*/
+	justify-content: flex-end;/*La propriété CSS justify-content indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe principal d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.ICI A LA FIN DE LA NAV*/
+}
+#nav-header a {
+    color: black;
+}
+@media (max-width: 500px) {
+#top-nav li:first-child {
+    opacity: 0;/*opacité*/
+  }
+}
+
+#apps-img{
+	vertical-align: middle; /*aligner l'image aumilieu de l'ul*/
+    padding-bottom: 5px; /*marge interieur 5px*/
+	
+}
+#bouton-connexion{
+	background: #4484F2; /*couleur du font du bouton*/
+	border: none;/*pas de bordure*/
+	border-radius: 2px;/*arrodi des angles*/
+	color: white;/*typo blanche*/
+	font-weight: bold;/*typo grasse*/
+	height: 30px;/*hauteur*/
+	width: 90px;/*largeur*/
+}
+
+
+
+/*--------------------SECTION---------------------*/
+#logo-google{
+	width: 50%; /*le logo doit prendre 50%de la taille de l'ecran*/
+}
+#section{
+	padding: 10px;/*10px de marge interieur*/
+	display: flex;/* les blocs se positionnent cote a cote par default*/
+	flex-direction: column;/*direction des boites qui se feront ici a la verticale*/
+  	justify-items: center;/* le texte s'aligne au cendre de la div section*/
+	align-items: center;/* le texte s'aligne au cendre de la div*/
+}
+#barre-de-recherche{
+	
+	
+	
+}
+#input-barre-de-recherche{
+	width: 500px;/*largeur bouton*/
+    height: 40px;/*hauteur bouton*/
+    border-radius: 40px;/*arrondi barre de recherche*/
+    text-indent: 20px;/*text commence a 20px du bord*/
+    border: 1px solid #BDBDBD; /*bordure du bouton*/
+	align-items: center;
+	justify-content: center;
+}
+
+#input-barre-de-recherche:focus, #input-barre-de-recherche:hover {
+  box-shadow: 2px 3px 5px #BDBDBD;
+}
+#boutton-recher-google{
+	display: flex;/*position flex box par default , alignement des boites*/
+    justify-content: center; /*La propriété CSS justify-content indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe principal d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.*/
+}
+
+
+
+/*CODE DES BOUTONS DE RECHERCHE INPUT*/
+
+input[type="submit"] {
+  margin: 15px 5px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  height: 30px;
+  width: 150px;
+  border-radius: 3px;
+  border: none;
+  color: #6E6E6E;
+}
+
+input[type="submit"]:hover {
+  border: 1px solid #6E6E6E;
+  color: black;
+  background: #ECECEC;
+  box-shadow: 2px 3px 5px #EFEFEF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------FOOTER---------------------*/
+footer{
+	bottom: 0;
+	position: absolute;
+	width: 100%; /* s'adapte a la taille de l'ecran donc en % */
+}
+#footer-france-div1{
+	background: #F2F2F2; /*fond de la div*/
+	border-top: 1px solide #6E6E6E; /*bordure haut*/
+	border-bottom: 1px solide #6E6E6E;  /*bordure bas*/
+	width: 100%; /* s'adapte a la taille de l'ecran donc en % */
+	height: 40px; /* quoi qu'il arrive la hauteur de la div peut inport la taille de t'ecran elle restera a 40px de haut c'est pour cela que ca reste en px*/
+	display: flex; /* les blocs se positionnent cote a cote par default*/
+	align-items: center; /* le texte s'aligne au cendre de la div*/
+	text-indent: 20px; /*le texte est decalé de 20px dans ma div*/
+	font-weight: 400;
+	color: #6E6E6E;/*couleur de la typo*/
+	
+	}
+#footer-france-div1 li:first-child {
+  margin-left: -20px;
+}
+
+#footer-div2{
+	background: #F2F2F2; /*fond de la div*/
+	border-bottom: 1px solide #6E6E6E;/*bordure bas*/
+	bottom: 0; /* bordure bas*/
+	width: 100%; /* s'adapte a la taille de l'ecran donc en % */
+	height: 40px; /* quoi qu'il arrive la hauteur de la div peut inport la taille de t'ecran elle restera a 40px de haut c'est pour cela que ca reste en px*/
+	display: flex; /* les blocs se positionnent cote a cote par default*/
+	align-items: center; /* le texte s'aligne au cendre de la div*/
+	justify-content: space-between; /*La propriété CSS justify-content indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe principal d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.*/
+	color:#6E6E6E;
+	}
+#footer-div2 a {
+  color: #6E6E6E;
+}
+	
+#footer-ul-gauche{
+	order: 1;/*l'element sera en 1er position dans la flexbox de la div*/
+    justify-content: center;/*La propriété CSS justify-content indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe principal d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.ICI ELLE SERA AU CENTRE DE LA DIV*/
+    align-items: center;/* le texte s'aligne au cendre de l'ul*/
+	display: flex;
+}
+#footer-ul-droite{
+	order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+li {
+  list-style: none; /*pour retiré les points des liste a puce (la décoration)*/
+  font-size: 0.5rem; /*taille de la typo*/
+  display: inline-block;
+  margin: 0 10px;/*0=marge exterieur haut et bas et 10px marge exterieur gauche droite*/
+}
+
+li:first-child {
+  margin-left: 0;/*pas de marge a gauche de la boite du li*/
+}
+
+li a {
+  text-decoration: none; /*pas de cadre/contourdu text cliquable */
+	color:#6E6E6E; /*couleur de la typo*/
+}
+
+li a:hover {
+  text-decoration: underline;/*une ligne se forme au passage de la souri*/
+	color:#6E6E6E;/*couleur de la typo*/
+}
+
+
+
+
+
